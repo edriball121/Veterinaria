@@ -9,6 +9,11 @@ Proyecto para curso de udemy
 6. verificar instalacion > php artisan route:list
 7. ejecutar proyecto de laravel > php artisan serve
 8. Configurar base de datos en php.ini extension=pdo_pgsql se activa esta linea
+9. Instalar postgresSQL
+10. congigurar en el env postgres sql
+11. Pru.eba1
+12. Seguir pasos para implementar JWT https://www.binaryboxtuts.com/php-tutorials/laravel-12-json-web-tokenjwt-authentication/
+
 
 
 
