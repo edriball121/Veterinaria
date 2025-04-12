@@ -1,43 +1,43 @@
 <?php
 
 namespace App\Models;
-
+ 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject; 
-
+ 
 class User extends Authenticatable implements JWTSubject
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
-
+    use HasRoles;
     /**
      * The attributes that are mass assignable.
      *
-     * @var list<string>
+     * @var array&lt;int, string>
      */
     protected $fillable = [
         'name',
         'email',
         'password',
     ];
-
+ 
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var list<string>
+     * @var array&lt;int, string>
      */
     protected $hidden = [
         'password',
         'remember_token',
     ];
-
+ 
     /**
      * Get the attributes that should be cast.
      *
-     * @return array<string, string>
+     * @return array&lt;string, string>
      */
     protected function casts(): array
     {
@@ -46,7 +46,7 @@ class User extends Authenticatable implements JWTSubject
             'password' => 'hashed',
         ];
     }
-
+ 
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *
