@@ -17,7 +17,10 @@ Proyecto para curso de udemy
 14. validar los endpoints de el controladore de autenticacion AuthController
 15. Instalar Laravel permission https://spatie.be/docs/laravel-permission/v5/installation-laravel
 16. instalar el permission > composer require spatie/laravel-permission
-
+17. ejecutar el seeders creado > php artisan db:seed
+18. ejecutar > php artisan migrate:fresh --seed --seeder=PermissionsDemoSeeder
+18. migrate:fresh resetea la data de las tablas
+19. Crear politica > php artisan make:policy UserPolicy --model=User
 
 
 
